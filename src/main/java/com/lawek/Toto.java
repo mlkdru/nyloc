@@ -1,1 +1,5 @@
-Coucou !
+package com.lawek;
+
+class Toto{
+	
+}
