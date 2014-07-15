@@ -8,8 +8,8 @@ public class NeuralNetwork {
 	List<Synapse> synapses;
 	List<Neuron> neurones;
 	
-	List<Entree> entreesReseau;
-	List<Neuron> sortiesReseau;
+	List<Entree> entrees;
+	List<Neuron> sorties;
 	
 	double seuilMoyenne = 0.2;
 	
@@ -39,6 +39,19 @@ public class NeuralNetwork {
 			}
 			
 			moyChang /= neurones.size();
+		}
+	}
+	
+	/**
+	 * Map les entréés d'un cas d'un problème sur le réseau pour préparer le transfert du réseau.
+	 * @param cas
+	 */
+	public void setCase(Case cas){
+		for(int i=0; i<cas.entrees.size(); i++ )
+		{
+			if(i<this.entrees.size()){
+				this.entrees.get(i).setEtat( cas.entrees.get(i) );
+			}
 		}
 	}
 }
