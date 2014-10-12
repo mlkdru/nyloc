@@ -57,8 +57,8 @@ public class App
     	GraphDatabaseService graphDb = new GraphDatabaseFactory().newEmbeddedDatabase( "neo4jdb" );
     	//registerShutdownHook( graphDb );
     	
-    	createNodeIfNotExist( graphDb, "localhost" );
-    	createNodeIfNotExist( graphDb, "192.168.0.19" );
+    	//createNodeIfNotExist( graphDb, "localhost" );
+    	//createNodeIfNotExist( graphDb, "192.168.0.19" );
     	
 //    	try ( Transaction tx = graphDb.beginTx() )
 //    	{
